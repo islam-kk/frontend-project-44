@@ -19,8 +19,9 @@ export default () => {
       rightAnswer = 'no';
     }
 
-    const userAnswer = readlineSync.question(`Question: ${randomNumber}`);
-    console.log(`Your answer: ${userAnswer}`);
+    console.log(`Question: ${randomNumber}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
       roundsCount += 1;
